@@ -1,0 +1,18 @@
+#tạo image cho spring
+docker build -t spring-app .
+
+
+#khởi động các container
+docker-compose up -d
+
+#xem logs(thông báo)
+docker-compose logs
+
+#Dừng các container
+docker-compose down -v
+
+docker build -t eureka-server .
+docker build -t department-service .
+docker build -t account-service .
+docker build -t api-gateway .
+docker-compose up
